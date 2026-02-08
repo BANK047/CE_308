@@ -4,9 +4,6 @@ import { View, Text , ScrollView, Alert } from "react-native";
 import { useState } from "react";
 import { CustomInput } from "./components/CustomInput";
 import { CustomButton } from "./components/CustomButton";
-// import { CenteredView } from "./components/CenteredView";
-// import { CustomButton } from "./components/CustomButton";
-// import { FlatList } from "react-native";
 
 export default function Index() {
 
