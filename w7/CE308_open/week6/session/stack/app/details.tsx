@@ -13,7 +13,7 @@ export default function DetailsScreen() {
       
       <Button
         title="Go to Settings"
-        onPress={() => router.push('/settings')}
+        // onPress={() => router.push('/settings')}
       />
     </View>
   );
