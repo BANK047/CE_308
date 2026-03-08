@@ -33,7 +33,7 @@ export const createBook = async (data: BookInput): Promise<Book> => {
 }
 
 export const updateBook = async (id: string, data: BookInput): Promise<Book> => {
-    const res = await axios.post(`${API_URL}/${id}`, data);
+    const res = await axios.put(`${API_URL}/${id}`, data);
     return res.data;
 }
 

@@ -1,9 +1,8 @@
 import express from 'express';
 import { prisma } from '../lib/prisma'
 import cors from 'cors'
-
 const app = express();
-const port = process.env.Port || 8080;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
@@ -23,6 +22,7 @@ app.get('/api/books', async (req, res) => {
         }
     }
     catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'An error occurred while fetching the book' })
     }
 });
@@ -41,6 +41,7 @@ app.get('/api/books/:id', async (req, res) => {
         }
     }
     catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'An error occurred while fetching the book' })
     };
 });
@@ -60,6 +61,7 @@ app.post('/api/books', async (req, res) => {
         res.status(201).json(book)
     }
     catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'An error occurred while creating the book.' })
     }
 });
@@ -81,6 +83,7 @@ app.put('/api/books/:id', async (req, res) => {
         res.json(book);
     }
     catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'An error occurred while updating the book.' })
     }
 });

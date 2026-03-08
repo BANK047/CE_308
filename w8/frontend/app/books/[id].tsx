@@ -43,8 +43,7 @@ export default function EditBookScreen() {
             });
             Alert.alert('Success', 'Book update!');
             router.back();
-        }
-        catch {
+        } catch {
             Alert.alert('Error', 'Failed to update book')
         }
     };
